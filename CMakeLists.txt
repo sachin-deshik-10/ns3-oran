@@ -32,23 +32,23 @@ if(NOT ${ENABLE_SQLITE})
   return()
 else()
   set(sqlite_libraries
-      ${SQLite3_LIBRARIES}
+    ${SQLite3_LIBRARIES}
   )
 endif()
 
 if(DEFINED ENV{LIBTORCHPATH})
   find_external_library(DEPENDENCY_NAME Torch
-                        HEADER_NAME
-                          torch/script.h
-                          torch.h
-                        LIBRARY_NAME torch
-                        SEARCH_PATHS $ENV{LIBTORCHPATH})
+    HEADER_NAME
+    torch/script.h
+    torch.h
+    LIBRARY_NAME torch
+    SEARCH_PATHS $ENV{LIBTORCHPATH})
 else()
   find_external_library(DEPENDENCY_NAME Torch
-                        HEADER_NAME
-                          torch/script.h
-                          torch.h
-                        LIBRARY_NAME torch)
+    HEADER_NAME
+    torch/script.h
+    torch.h
+    LIBRARY_NAME torch)
 endif()
 
 if(${Torch_FOUND})
@@ -59,37 +59,38 @@ endif()
 set(torch_libraries)
 set(oran_torch_sources)
 set(oran_torch_headers)
+
 if(${Torch_FOUND})
   set(torch_libraries ${Torch_LIBRARIES})
   set(oran_torch_sources
-      model/oran-lm-lte-2-lte-torch-handover.cc
+    model/oran-lm-lte-2-lte-torch-handover.cc
   )
   set(oran_torch_headers
-      model/oran-lm-lte-2-lte-torch-handover.h
+    model/oran-lm-lte-2-lte-torch-handover.h
   )
 endif()
 
 if(DEFINED ENV{LIBONNXPATH})
   find_external_library(DEPENDENCY_NAME OnnxRuntime
-                        HEADER_NAME
-                          cpu_provider_factory.h
-                          onnxruntime_c_api.h
-                          onnxruntime_cxx_api.h
-                          onnxruntime_run_options_config_keys.h
-                          onnxruntime_session_options_config_keys.h
-                          provider_options.h
-                        LIBRARY_NAME onnxruntime
-                        SEARCH_PATHS $ENV{LIBONNXPATH})
+    HEADER_NAME
+    cpu_provider_factory.h
+    onnxruntime_c_api.h
+    onnxruntime_cxx_api.h
+    onnxruntime_run_options_config_keys.h
+    onnxruntime_session_options_config_keys.h
+    provider_options.h
+    LIBRARY_NAME onnxruntime
+    SEARCH_PATHS $ENV{LIBONNXPATH})
 else()
   find_external_library(DEPENDENCY_NAME OnnxRuntime
-                        HEADER_NAME
-                          cpu_provider_factory.h
-                          onnxruntime_c_api.h
-                          onnxruntime_cxx_api.h
-                          onnxruntime_run_options_config_keys.h
-                          onnxruntime_session_options_config_keys.h
-                          provider_options.h
-                        LIBRARY_NAME onnxruntime)
+    HEADER_NAME
+    cpu_provider_factory.h
+    onnxruntime_c_api.h
+    onnxruntime_cxx_api.h
+    onnxruntime_run_options_config_keys.h
+    onnxruntime_session_options_config_keys.h
+    provider_options.h
+    LIBRARY_NAME onnxruntime)
 endif()
 
 if(${OnnxRuntime_FOUND})
@@ -100,107 +101,115 @@ endif()
 set(onnxruntime_libraries)
 set(oran_onnxruntime_sources)
 set(oran_onnxruntime_headers)
+
 if(${OnnxRuntime_FOUND})
   set(onnxruntime_libraries ${OnnxRuntime_LIBRARIES})
   set(oran_onnxruntime_sources
-      model/oran-lm-lte-2-lte-onnx-handover.cc
+    model/oran-lm-lte-2-lte-onnx-handover.cc
   )
   set(oran_onnxruntime_headers
-      model/oran-lm-lte-2-lte-onnx-handover.h
+    model/oran-lm-lte-2-lte-onnx-handover.h
   )
 endif()
 
 build_lib(
   LIBNAME oran
   SOURCE_FILES
-    model/oran-near-rt-ric.cc
-    model/oran-lm.cc
-    model/oran-lm-noop.cc
-    model/oran-lm-lte-2-lte-distance-handover.cc
-    model/oran-lm-lte-2-lte-rsrp-handover.cc
-    model/oran-cmm.cc
-    model/oran-cmm-handover.cc
-    model/oran-cmm-noop.cc
-    model/oran-cmm-single-command-per-node.cc
-    model/oran-command.cc
-    model/oran-command-lte-2-lte-handover.cc
-    model/oran-report.cc
-    model/oran-report-apploss.cc
-    model/oran-report-lte-ue-rsrp-rsrq.cc
-    model/oran-report-location.cc
-    model/oran-report-lte-ue-cell-info.cc
-    model/oran-reporter.cc
-    model/oran-reporter-apploss.cc
-    model/oran-reporter-lte-ue-rsrp-rsrq.cc
-    model/oran-reporter-location.cc
-    model/oran-reporter-lte-ue-cell-info.cc
-    model/oran-data-repository.cc
-    model/oran-data-repository-sqlite.cc
-    model/oran-near-rt-ric-e2terminator.cc
-    model/oran-e2-node-terminator.cc
-    model/oran-e2-node-terminator-wired.cc
-    model/oran-e2-node-terminator-lte-enb.cc
-    model/oran-e2-node-terminator-lte-ue.cc
-    model/oran-e2-node-terminator-container.cc
-    model/oran-report-trigger.cc
-    model/oran-report-trigger-periodic.cc
-    model/oran-report-trigger-lte-ue-handover.cc
-    model/oran-report-trigger-location-change.cc
-    model/oran-query-trigger.cc
-    model/oran-query-trigger-noop.cc
-    model/oran-query-trigger-custom.cc
-    helper/oran-helper.cc
-    ${oran_onnxruntime_sources}
-    ${oran_torch_sources}
+  model/oran-near-rt-ric.cc
+  model/oran-lm.cc
+  model/oran-lm-noop.cc
+  model/oran-lm-lte-2-lte-distance-handover.cc
+  model/oran-lm-lte-2-lte-rsrp-handover.cc
+  model/oran-lm-reinforcement-learning.cc
+  model/oran-digital-twin.cc
+  model/oran-mec-framework.cc
+  model/oran-cloud-native.cc
+  model/oran-cmm.cc
+  model/oran-cmm-handover.cc
+  model/oran-cmm-noop.cc
+  model/oran-cmm-single-command-per-node.cc
+  model/oran-command.cc
+  model/oran-command-lte-2-lte-handover.cc
+  model/oran-report.cc
+  model/oran-report-apploss.cc
+  model/oran-report-lte-ue-rsrp-rsrq.cc
+  model/oran-report-location.cc
+  model/oran-report-lte-ue-cell-info.cc
+  model/oran-reporter.cc
+  model/oran-reporter-apploss.cc
+  model/oran-reporter-lte-ue-rsrp-rsrq.cc
+  model/oran-reporter-location.cc
+  model/oran-reporter-lte-ue-cell-info.cc
+  model/oran-data-repository.cc
+  model/oran-data-repository-sqlite.cc
+  model/oran-near-rt-ric-e2terminator.cc
+  model/oran-e2-node-terminator.cc
+  model/oran-e2-node-terminator-wired.cc
+  model/oran-e2-node-terminator-lte-enb.cc
+  model/oran-e2-node-terminator-lte-ue.cc
+  model/oran-e2-node-terminator-container.cc
+  model/oran-report-trigger.cc
+  model/oran-report-trigger-periodic.cc
+  model/oran-report-trigger-lte-ue-handover.cc
+  model/oran-report-trigger-location-change.cc
+  model/oran-query-trigger.cc
+  model/oran-query-trigger-noop.cc
+  model/oran-query-trigger-custom.cc
+  helper/oran-helper.cc
+  ${oran_onnxruntime_sources}
+  ${oran_torch_sources}
   HEADER_FILES
-    model/oran-near-rt-ric.h
-    model/oran-lm.h
-    model/oran-lm-noop.h
-    model/oran-lm-lte-2-lte-distance-handover.h
-    model/oran-lm-lte-2-lte-rsrp-handover.h
-    model/oran-cmm.h
-    model/oran-cmm-handover.h
-    model/oran-cmm-noop.h
-    model/oran-cmm-single-command-per-node.h
-    model/oran-command.h
-    model/oran-command-lte-2-lte-handover.h
-    model/oran-report.h
-    model/oran-report-apploss.h
-    model/oran-report-lte-ue-rsrp-rsrq.h
-    model/oran-report-location.h
-    model/oran-report-lte-ue-cell-info.h
-    model/oran-reporter.h
-    model/oran-reporter-apploss.h
-    model/oran-reporter-lte-ue-rsrp-rsrq.h
-    model/oran-reporter-location.h
-    model/oran-reporter-lte-ue-cell-info.h
-    model/oran-data-repository.h
-    model/oran-data-repository-sqlite.h
-    model/oran-near-rt-ric-e2terminator.h
-    model/oran-e2-node-terminator.h
-    model/oran-e2-node-terminator-wired.h
-    model/oran-e2-node-terminator-lte-enb.h
-    model/oran-e2-node-terminator-lte-ue.h
-    model/oran-e2-node-terminator-container.h
-    model/oran-report-trigger.h
-    model/oran-report-trigger-periodic.h
-    model/oran-report-trigger-lte-ue-handover.h
-    model/oran-report-trigger-location-change.h
-    model/oran-query-trigger.h
-    model/oran-query-trigger-custom.h
-    helper/oran-helper.h
-    ${oran_onnxruntime_headers}
-    ${oran_torch_headers}
+  model/oran-near-rt-ric.h
+  model/oran-lm.h
+  model/oran-lm-noop.h
+  model/oran-lm-lte-2-lte-distance-handover.h
+  model/oran-lm-lte-2-lte-rsrp-handover.h
+  model/oran-lm-reinforcement-learning.h
+  model/oran-digital-twin.h
+  model/oran-mec-framework.h
+  model/oran-cloud-native.h
+  model/oran-cmm.h
+  model/oran-cmm-handover.h
+  model/oran-cmm-noop.h
+  model/oran-cmm-single-command-per-node.h
+  model/oran-command.h
+  model/oran-command-lte-2-lte-handover.h
+  model/oran-report.h
+  model/oran-report-apploss.h
+  model/oran-report-lte-ue-rsrp-rsrq.h
+  model/oran-report-location.h
+  model/oran-report-lte-ue-cell-info.h
+  model/oran-reporter.h
+  model/oran-reporter-apploss.h
+  model/oran-reporter-lte-ue-rsrp-rsrq.h
+  model/oran-reporter-location.h
+  model/oran-reporter-lte-ue-cell-info.h
+  model/oran-data-repository.h
+  model/oran-data-repository-sqlite.h
+  model/oran-near-rt-ric-e2terminator.h
+  model/oran-e2-node-terminator.h
+  model/oran-e2-node-terminator-wired.h
+  model/oran-e2-node-terminator-lte-enb.h
+  model/oran-e2-node-terminator-lte-ue.h
+  model/oran-e2-node-terminator-container.h
+  model/oran-report-trigger.h
+  model/oran-report-trigger-periodic.h
+  model/oran-report-trigger-lte-ue-handover.h
+  model/oran-report-trigger-location-change.h
+  model/oran-query-trigger.h
+  model/oran-query-trigger-custom.h
+  helper/oran-helper.h
+  ${oran_onnxruntime_headers}
+  ${oran_torch_headers}
   LIBRARIES_TO_LINK
-    ${libcore}
-    ${libnetwork}
-    ${liblte}
-    ${sqlite_libraries}
-    ${torch_libraries}
-    ${onnxruntime_libraries}
+  ${libcore}
+  ${libnetwork}
+  ${liblte}
+  ${sqlite_libraries}
+  ${torch_libraries}
+  ${onnxruntime_libraries}
   TEST_SOURCES
-    test/oran-test-suite.cc
+  test/oran-test-suite.cc
 )
 
 target_compile_definitions(${liboran} PUBLIC ENABLE_ORAN)
-

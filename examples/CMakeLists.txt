@@ -31,92 +31,118 @@ build_lib_example(
   NAME oran-data-repository-example
   SOURCE_FILES oran-data-repository-example.cc
   LIBRARIES_TO_LINK
-    ${liboran}
+  ${liboran}
 )
 
 build_lib_example(
   NAME oran-keep-alive-example
   SOURCE_FILES oran-keep-alive-example.cc
   LIBRARIES_TO_LINK
-    ${liboran}
-    ${libmobility}
+  ${liboran}
+  ${libmobility}
 )
 
 build_lib_example(
   NAME oran-lte-2-lte-distance-handover-example
   SOURCE_FILES oran-lte-2-lte-distance-handover-example.cc
   LIBRARIES_TO_LINK
-    ${liboran}
-    ${libnetwork}
-    ${liblte}
-    ${libmobility}
+  ${liboran}
+  ${libnetwork}
+  ${liblte}
+  ${libmobility}
 )
 
 build_lib_example(
   NAME oran-lte-2-lte-distance-handover-helper-example
   SOURCE_FILES oran-lte-2-lte-distance-handover-helper-example.cc
   LIBRARIES_TO_LINK
-    ${liboran}
-    ${libnetwork}
-    ${liblte}
-    ${libmobility}
+  ${liboran}
+  ${libnetwork}
+  ${liblte}
+  ${libmobility}
 )
 
 build_lib_example(
   NAME oran-lte-2-lte-distance-handover-lm-processing-delay-example
   SOURCE_FILES oran-lte-2-lte-distance-handover-lm-processing-delay-example.cc
   LIBRARIES_TO_LINK
-    ${liboran}
-    ${libnetwork}
-    ${liblte}
-    ${libmobility}
+  ${liboran}
+  ${libnetwork}
+  ${liblte}
+  ${libmobility}
 )
 
 build_lib_example(
   NAME oran-lte-2-lte-distance-handover-lm-query-trigger-example
   SOURCE_FILES oran-lte-2-lte-distance-handover-lm-query-trigger-example.cc
   LIBRARIES_TO_LINK
-    ${liboran}
-    ${libnetwork}
-    ${liblte}
-    ${libmobility}
+  ${liboran}
+  ${libnetwork}
+  ${liblte}
+  ${libmobility}
 )
 
 build_lib_example(
   NAME oran-random-walk-example
   SOURCE_FILES oran-random-walk-example.cc
   LIBRARIES_TO_LINK
-    ${liboran}
-    ${libmobility}
+  ${liboran}
+  ${libmobility}
 )
 
 build_lib_example(
   NAME oran-multiple-net-devices-example
   SOURCE_FILES oran-multiple-net-devices-example.cc
   LIBRARIES_TO_LINK
-    ${liboran}
-    ${libmobility}
-    ${libnetwork}
-    ${liblte}
+  ${liboran}
+  ${libmobility}
+  ${libnetwork}
+  ${liblte}
 )
 
 build_lib_example(
   NAME oran-lte-2-lte-ml-handover-example
   SOURCE_FILES oran-lte-2-lte-ml-handover-example.cc
   LIBRARIES_TO_LINK
-    ${liboran}
-    ${libnetwork}
-    ${liblte}
-    ${libmobility}
+  ${liboran}
+  ${libnetwork}
+  ${liblte}
+  ${libmobility}
 )
 
 build_lib_example(
   NAME oran-lte-2-lte-rsrp-handover-lm-example
   SOURCE_FILES oran-lte-2-lte-rsrp-handover-lm-example.cc
   LIBRARIES_TO_LINK
-    ${liboran}
-    ${libnetwork}
-    ${liblte}
-    ${libmobility}
+  ${liboran}
+  ${libnetwork}
+  ${liblte}
+  ${libmobility}
 )
 
+build_lib_example(
+  NAME oran-advanced-ai-edge-example
+  SOURCE_FILES oran-advanced-ai-edge-example.cc
+  LIBRARIES_TO_LINK
+  ${liboran}
+  ${libnetwork}
+  ${liblte}
+  ${libmobility}
+  ${libapplications}
+  ${libinternet}
+  ${libpoint-to-point}
+)
+
+build_lib_example(
+  NAME oran-advanced-integration-example
+  SOURCE_FILES oran-advanced-integration-example.cc
+  LIBRARIES_TO_LINK
+  ${liboran}
+  ${libnetwork}
+  ${liblte}
+  ${libmobility}
+  ${libapplications}
+  ${libinternet}
+  ${libpoint-to-point}
+  ${libconfig-store}
+)

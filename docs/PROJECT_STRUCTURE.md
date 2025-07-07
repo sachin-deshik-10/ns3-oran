@@ -4,6 +4,58 @@ This document provides an overview of the O-RAN Module for ns-3 project structur
 
 ## Directory Structure
 
+ns3-oran-master/
+├── .github/                    # GitHub-specific files
+│   ├── ISSUE_TEMPLATE/         # Issue templates
+│   │   ├── bug_report.md       # Bug report template
+│   │   └── feature_request.md  # Feature request template
+│   └── workflows/              # GitHub Actions workflows
+│       └── ci.yml              # Continuous integration pipeline
+├── docs/                       # Documentation
+│   ├── ARCHITECTURE.md         # Architecture documentation
+│   ├── API_REFERENCE.md        # API reference documentation
+│   ├── USER_GUIDE.md           # User guide and tutorials
+│   └── WORKFLOW.md             # Development workflow guide
+├── examples/                   # Example simulations
+│   ├── CMakeLists.txt          # Build configuration for examples
+│   ├── oran-data-repository-example.cc
+│   ├── oran-keep-alive-example.cc
+│   ├── oran-lte-2-lte-distance-handover-example.cc
+│   ├── oran-lte-2-lte-distance-handover-helper-example.cc
+│   ├── oran-lte-2-lte-distance-handover-lm-processing-delay-example.cc
+│   ├── oran-lte-2-lte-distance-handover-lm-query-trigger-example.cc
+│   ├── oran-lte-2-lte-ml-handover-example.cc
+│   ├── oran-lte-2-lte-ml-handover-example-classifier.py
+│   ├── oran-lte-2-lte-ml-handover-example-generate-training-data.sh
+│   ├── oran-lte-2-lte-rsrp-handover-lm-example.cc
+│   ├── oran-multiple-net-devices-example.cc
+│   ├── oran-random-walk-example.cc
+│   ├── saved_trained_classification_pytorch.onnx
+│   └── saved_trained_classification_pytorch.pt
+├── helper/                     # Helper classes
+│   ├── oran-helper.cc          # Main helper implementation
+│   └── oran-helper.h           # Main helper header
+├── model/                      # Core model implementation
+│   ├── oran-cmm-*.{cc,h}       # Conflict Mitigation Modules
+│   ├── oran-command-*.{cc,h}   # Command classes
+│   ├── oran-data-repository*.{cc,h} # Data repository classes
+│   ├── oran-e2-node-terminator*.{cc,h} # E2 node terminators
+│   ├── oran-lm-*.{cc,h}        # Logic modules
+│   ├── oran-near-rt-ric*.{cc,h} # Near-RT RIC implementation
+│   ├── oran-query-trigger*.{cc,h} # Query triggers
+│   ├── oran-report*.{cc,h}     # Report classes
+│   └── oran-reporter*.{cc,h}   # Reporter classes
+├── test/                       # Test suite
+│   └── oran-test-suite.cc      # Unit tests
+├── .clang-tidy                 # Clang-tidy configuration
+├── .gitignore                  # Git ignore rules
+├── CHANGELOG.md                # Version history and changes
+├── CMakeLists.txt              # Build configuration
+├── CONTRIBUTING.md             # Contribution guidelines
+├── LICENSE.md                  # License information
+├── README.md                   # Project overview and quick start
+├── SECURITY.md                 # Security policy
+└── THIRD_PARTY_LICENSES.md     # Third-party licenses
 ```
 ns3-oran-master/
 ├── .github/                    # GitHub-specific files
