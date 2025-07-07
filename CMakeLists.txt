@@ -124,6 +124,7 @@ build_lib(
   model/oran-digital-twin.cc
   model/oran-mec-framework.cc
   model/oran-cloud-native.cc
+  model/oran-6g-terahertz.cc
   model/oran-cmm.cc
   model/oran-cmm-handover.cc
   model/oran-cmm-noop.cc
@@ -168,6 +169,7 @@ build_lib(
   model/oran-digital-twin.h
   model/oran-mec-framework.h
   model/oran-cloud-native.h
+  model/oran-6g-terahertz.h
   model/oran-cmm.h
   model/oran-cmm-handover.h
   model/oran-cmm-noop.h

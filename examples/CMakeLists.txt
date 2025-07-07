@@ -146,3 +146,29 @@ build_lib_example(
   ${libpoint-to-point}
   ${libconfig-store}
 )
+
+build_lib_example(
+  NAME oran-6g-terahertz-example
+  SOURCE_FILES oran-6g-terahertz-example.cc
+  LIBRARIES_TO_LINK
+  ${liboran}
+  ${libnetwork}
+  ${liblte}
+  ${libmobility}
+  ${libapplications}
+  ${libinternet}
+  ${libpoint-to-point}
+)
+
+build_lib_example(
+  NAME oran-6g-ai-integrated-example
+  SOURCE_FILES oran-6g-ai-integrated-example.cc
+  LIBRARIES_TO_LINK
+  ${liboran}
+  ${libnetwork}
+  ${liblte}
+  ${libmobility}
+  ${libapplications}
+  ${libinternet}
+  ${libpoint-to-point}
+)
