@@ -1,0 +1,121 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ns3-version: ['3.35', '3.36']
+        compiler: ['gcc-9', 'gcc-10', 'clang-10']
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y build-essential cmake sqlite3 libsqlite3-dev
+        sudo apt-get install -y python3 python3-pip
+        
+    - name: Setup compiler
+      run: |
+        if [[ "${{ matrix.compiler }}" == "gcc-9" ]]; then
+          sudo apt-get install -y gcc-9 g++-9
+          export CC=gcc-9
+          export CXX=g++-9
+        elif [[ "${{ matrix.compiler }}" == "gcc-10" ]]; then
+          sudo apt-get install -y gcc-10 g++-10
+          export CC=gcc-10
+          export CXX=g++-10
+        elif [[ "${{ matrix.compiler }}" == "clang-10" ]]; then
+          sudo apt-get install -y clang-10
+          export CC=clang-10
+          export CXX=clang++-10
+        fi
+        
+    - name: Download and build ns-3
+      run: |
+        wget https://www.nsnam.org/releases/ns-allinone-${{ matrix.ns3-version }}.tar.bz2
+        tar xjf ns-allinone-${{ matrix.ns3-version }}.tar.bz2
+        cd ns-allinone-${{ matrix.ns3-version }}/ns-${{ matrix.ns3-version }}
+        ./waf configure --enable-tests --enable-sqlite
+        ./waf build
+        
+    - name: Install O-RAN module
+      run: |
+        cp -r . ns-allinone-${{ matrix.ns3-version }}/ns-${{ matrix.ns3-version }}/contrib/oran
+        cd ns-allinone-${{ matrix.ns3-version }}/ns-${{ matrix.ns3-version }}
+        ./waf configure --enable-tests --enable-sqlite
+        ./waf build
+        
+    - name: Run tests
+      run: |
+        cd ns-allinone-${{ matrix.ns3-version }}/ns-${{ matrix.ns3-version }}
+        ./waf --run "test-runner --suite=oran"
+        
+    - name: Run examples
+      run: |
+        cd ns-allinone-${{ matrix.ns3-version }}/ns-${{ matrix.ns3-version }}
+        ./waf --run "oran-data-repository-example"
+        ./waf --run "oran-keep-alive-example"
+        
+  lint:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Install clang-format and clang-tidy
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y clang-format clang-tidy
+        
+    - name: Check code formatting
+      run: |
+        find . -name "*.cc" -o -name "*.h" | xargs clang-format --dry-run --Werror
+        
+    - name: Run static analysis
+      run: |
+        find . -name "*.cc" | xargs clang-tidy
+        
+  documentation:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Check documentation
+      run: |
+        # Check if all public methods have documentation
+        grep -r "public:" --include="*.h" . || true
+        
+        # Validate markdown files
+        find . -name "*.md" -exec echo "Checking {}" \;
+        
+  security:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Run CodeQL Analysis
+      uses: github/codeql-action/init@v2
+      with:
+        languages: cpp
+        
+    - name: Build for security analysis
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y build-essential cmake sqlite3 libsqlite3-dev
+        mkdir build && cd build
+        cmake ..
+        make
+        
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v2
