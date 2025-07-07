@@ -127,6 +127,10 @@ build_lib(
   model/oran-6g-terahertz.cc
   model/oran-ai-transformer.cc
   model/oran-6g-network-slicing.cc
+  model/oran-6g-quantum-enhanced.cc
+  model/oran-6g-edge-ai.cc
+  model/oran-6g-sags-network.cc
+  model/oran-6g-ultra-ai-orchestrator.cc
   model/oran-cmm.cc
   model/oran-cmm-handover.cc
   model/oran-cmm-noop.cc
@@ -174,6 +178,18 @@ build_lib(
   model/oran-6g-terahertz.h
   model/oran-ai-transformer.h
   model/oran-6g-network-slicing.h
+  model/oran-6g-quantum-enhanced.h
+  model/oran-6g-holographic.h
+  model/oran-6g-performance-optimizer.h
+  model/oran-6g-industrial-iot.h
+  model/oran-6g-edge-ai.h
+  model/oran-6g-metaverse.h
+  model/oran-6g-cybersecurity.h
+  model/oran-6g-sags-network.h
+  model/oran-6g-semantic-communications.h
+  model/oran-6g-brain-computer-interface.h
+  model/oran-6g-neuromorphic-computing.h
+  model/oran-6g-ultra-ai-orchestrator.h
   model/oran-cmm.h
   model/oran-cmm-handover.h
   model/oran-cmm-noop.h

@@ -186,3 +186,59 @@ build_lib_example(
   ${libpoint-to-point}
   ${libconfig-store}
 )
+
+build_lib_example(
+  NAME oran-6g-comprehensive-advanced-example
+  SOURCE_FILES oran-6g-comprehensive-advanced-example.cc
+  LIBRARIES_TO_LINK
+  ${liboran}
+  ${libnetwork}
+  ${liblte}
+  ${libmobility}
+  ${libapplications}
+  ${libinternet}
+  ${libpoint-to-point}
+  ${libconfig-store}
+)
+
+build_lib_example(
+  NAME oran-6g-next-generation-advanced-example
+  SOURCE_FILES oran-6g-next-generation-advanced-example.cc
+  LIBRARIES_TO_LINK
+  ${liboran}
+  ${libnetwork}
+  ${liblte}
+  ${libmobility}
+  ${libapplications}
+  ${libinternet}
+  ${libpoint-to-point}
+  ${libconfig-store}
+)
+
+build_lib_example(
+  NAME oran-6g-ultimate-next-generation-example
+  SOURCE_FILES oran-6g-ultimate-next-generation-example.cc
+  LIBRARIES_TO_LINK
+  ${liboran}
+  ${libnetwork}
+  ${liblte}
+  ${libmobility}
+  ${libapplications}
+  ${libinternet}
+  ${libpoint-to-point}
+  ${libconfig-store}
+)
+
+build_lib_example(
+  NAME oran-6g-real-time-ai-orchestration-demo
+  SOURCE_FILES oran-6g-real-time-ai-orchestration-demo.cc
+  LIBRARIES_TO_LINK
+  ${liboran}
+  ${libnetwork}
+  ${liblte}
+  ${libmobility}
+  ${libapplications}
+  ${libinternet}
+  ${libpoint-to-point}
+  ${libconfig-store}
+)
