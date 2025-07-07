@@ -5,6 +5,7 @@
 Based on the comprehensive codebase analysis, the O-RAN Enhanced Module currently includes:
 
 ### ✅ **Implemented Advanced Features**
+
 - **Reinforcement Learning**: DQN/PPO algorithms for intelligent handovers
 - **Digital Twin Framework**: Predictive analytics with 94.3% accuracy
 - **Multi-access Edge Computing (MEC)**: 4 edge services deployment
@@ -13,6 +14,7 @@ Based on the comprehensive codebase analysis, the O-RAN Enhanced Module currentl
 - **Real-time Analytics**: 42,000+ measurement data points processing
 
 ### 🎯 **Performance Achievements**
+
 - **100% handover success rate** (exceeds industry standard)
 - **14.8ms average latency** (excellent performance)
 - **93.8% AI/ML performance** with convergence in 5 episodes
@@ -25,6 +27,7 @@ Based on the comprehensive codebase analysis, the O-RAN Enhanced Module currentl
 ### 1.1 **6G Air Interface and Physical Layer**
 
 #### **Terahertz Communication Module**
+
 ```cpp
 // New file: model/oran-6g-terahertz.{h,cc}
 class Oran6gTerahertzPhy : public Object
@@ -48,6 +51,7 @@ public:
 ```
 
 #### **Implementation Benefits**
+
 - **100+ Gbps data rates** through THz bands
 - **Ultra-low latency** <1ms through intelligent surfaces
 - **Massive connectivity** supporting 10M+ devices per km²
@@ -55,6 +59,7 @@ public:
 ### 1.2 **6G Network Architecture**
 
 #### **Cell-Free Massive MIMO**
+
 ```cpp
 // New file: model/oran-6g-cell-free.{h,cc}
 class Oran6gCellFreeNetwork : public Object
@@ -75,6 +80,7 @@ public:
 ```
 
 #### **Integrated Sensing and Communication (ISAC)**
+
 ```cpp
 // New file: model/oran-6g-isac.{h,cc}
 class Oran6gIsacFramework : public Object
@@ -95,6 +101,7 @@ public:
 ```
 
 ### 1.3 **Implementation Priority & Timeline**
+
 - **Month 1-2**: THz physical layer implementation
 - **Month 3-4**: Cell-free massive MIMO integration
 - **Month 5-6**: ISAC framework development and testing
@@ -106,6 +113,7 @@ public:
 ### 2.1 **Next-Generation AI Algorithms**
 
 #### **Transformer-Based Network Intelligence**
+
 ```cpp
 // New file: model/oran-ai-transformer.{h,cc}
 class OranTransformerIntelligence : public Object
@@ -126,6 +134,7 @@ public:
 ```
 
 #### **Causal AI for Network Prediction**
+
 ```cpp
 // New file: model/oran-ai-causal.{h,cc}
 class OranCausalAI : public Object
@@ -148,6 +157,7 @@ public:
 ### 2.2 **Distributed and Federated Learning Enhancements**
 
 #### **Hierarchical Federated Learning**
+
 ```cpp
 // Enhancement to existing: model/oran-mec-framework.{h,cc}
 class HierarchicalFederatedLearning : public FederatedLearningManager
@@ -169,6 +179,7 @@ public:
 ```
 
 #### **Continual Learning Framework**
+
 ```cpp
 // New file: model/oran-ai-continual.{h,cc}
 class OranContinualLearning : public Object
@@ -189,6 +200,7 @@ public:
 ```
 
 ### 2.3 **Implementation Benefits**
+
 - **10x faster** convergence through transformer architectures
 - **Causal understanding** of network behavior for better predictions
 - **Adaptive learning** that continuously improves without forgetting
@@ -201,6 +213,7 @@ public:
 ### 3.1 **Holographic Communications**
 
 #### **3D Holographic Rendering Engine**
+
 ```cpp
 // New file: model/oran-6g-holographic.{h,cc}
 class Oran6gHolographicComm : public Object
@@ -226,6 +239,7 @@ public:
 ### 3.2 **Quantum-Enhanced Communication**
 
 #### **Quantum Communication Integration**
+
 ```cpp
 // New file: model/oran-6g-quantum.{h,cc}
 class Oran6gQuantumComm : public Object
@@ -251,6 +265,7 @@ public:
 ### 3.3 **Space-Air-Ground-Sea (SAGS) Integration**
 
 #### **Multi-Domain Communication**
+
 ```cpp
 // New file: model/oran-6g-sags.{h,cc}
 class Oran6gSagsNetwork : public Object
@@ -280,6 +295,7 @@ public:
 ### 4.1 **Advanced Digital Twin Capabilities**
 
 #### **Real-Time Digital Twin Synchronization**
+
 ```cpp
 // Enhancement to existing: model/oran-digital-twin.{h,cc}
 class AdvancedDigitalTwin : public OranDigitalTwin
@@ -303,6 +319,7 @@ public:
 ```
 
 #### **Metaverse Integration**
+
 ```cpp
 // New file: model/oran-6g-metaverse.{h,cc}
 class Oran6gMetaverseIntegration : public Object
@@ -326,6 +343,7 @@ public:
 ```
 
 ### 4.2 **Implementation Benefits**
+
 - **Sub-millisecond** digital twin synchronization
 - **Metaverse-ready** network simulation capabilities
 - **Physics-informed** predictions with uncertainty quantification
@@ -338,6 +356,7 @@ public:
 ### 5.1 **Industry 4.0 Integration**
 
 #### **Industrial IoT and Automation**
+
 ```cpp
 // New file: model/oran-6g-industry40.{h,cc}
 class Oran6gIndustry40 : public Object
@@ -363,6 +382,7 @@ public:
 ### 5.2 **Healthcare and Telemedicine**
 
 #### **Medical Grade 6G Services**
+
 ```cpp
 // New file: model/oran-6g-healthcare.{h,cc}
 class Oran6gHealthcare : public Object
@@ -390,6 +410,7 @@ public:
 ## 🛠 **IMPLEMENTATION ROADMAP**
 
 ### **Phase 1 (Months 1-6): 6G Foundation**
+
 1. **THz Communication Module**
    - Physical layer modeling
    - Atmospheric loss calculations
@@ -406,6 +427,7 @@ public:
    - Cooperative beamforming
 
 ### **Phase 2 (Months 7-12): AI/ML Advancement**
+
 1. **Transformer-Based Intelligence**
    - Multi-head attention implementation
    - Graph neural networks for topology
@@ -422,6 +444,7 @@ public:
    - Privacy-preserving techniques
 
 ### **Phase 3 (Months 13-18): Communication Features**
+
 1. **Holographic Communications**
    - 3D data compression
    - Point cloud transmission
@@ -438,6 +461,7 @@ public:
    - Inter-domain handover
 
 ### **Phase 4 (Months 19-24): Advanced Services**
+
 1. **Digital Twin Enhancement**
    - Real-time synchronization
    - Physics-informed models
@@ -473,6 +497,7 @@ public:
 ## 🎯 **RESEARCH OPPORTUNITIES & PUBLICATIONS**
 
 ### **High-Impact Research Areas**
+
 1. **6G THz Communication** - Physical layer innovations
 2. **AI-Native Network Architecture** - Transformer-based networking
 3. **Quantum-Enhanced Security** - Post-quantum cryptography
@@ -481,6 +506,7 @@ public:
 6. **Metaverse Networking** - Cross-reality communication
 
 ### **Potential Publications**
+
 - **IEEE Network Magazine**: "6G O-RAN with AI-Native Architecture"
 - **Nature Communications**: "Quantum-Enhanced 6G Networks"
 - **IEEE TWC**: "Transformer-Based Network Intelligence"
@@ -492,6 +518,7 @@ public:
 ## 🔬 **DEVELOPMENT TOOLS & INFRASTRUCTURE**
 
 ### **Required Development Environment**
+
 ```bash
 # Enhanced development setup
 sudo apt-get install libtorch-dev quantum-dev terahertz-libs
@@ -506,6 +533,7 @@ make -j$(nproc)
 ```
 
 ### **New Example Files to Create**
+
 1. `examples/oran-6g-terahertz-example.cc`
 2. `examples/oran-6g-holographic-example.cc`
 3. `examples/oran-6g-quantum-security-example.cc`
@@ -519,16 +547,19 @@ make -j$(nproc)
 This comprehensive roadmap transforms the current O-RAN module into a **world-leading 6G simulation platform** with:
 
 ### **Immediate Value (6 months)**
+
 - THz communication capabilities
 - Advanced AI/ML algorithms
 - Enhanced digital twin features
 
 ### **Medium-term Impact (12 months)**
+
 - Quantum-enhanced security
 - Holographic communications
 - SAGS network integration
 
 ### **Long-term Vision (24 months)**
+
 - Complete 6G ecosystem simulation
 - Metaverse-ready networking
 - Industry 4.0 integration

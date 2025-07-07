@@ -7,18 +7,21 @@
 Based on your research interests, select ONE of these high-impact features to implement first:
 
 #### Option A: **6G THz Communication** (Highest Impact)
+
 - **Files to create**: `model/oran-6g-terahertz.{h,cc}`
 - **Example**: `examples/oran-6g-terahertz-example.cc`
 - **Research value**: Physical layer innovations, ultra-high data rates
 - **Implementation time**: 1-2 weeks
 
 #### Option B: **AI-Native Network Intelligence** (High Research Value)
+
 - **Files to create**: `model/oran-ai-transformer.{h,cc}`
 - **Enhancement**: Extend existing `oran-lm-reinforcement-learning.cc`
 - **Research value**: Transformer-based networking, attention mechanisms
 - **Implementation time**: 1-2 weeks
 
 #### Option C: **Advanced Digital Twin** (Practical Impact)
+
 - **Files to enhance**: `model/oran-digital-twin.{h,cc}`
 - **New features**: Real-time sync, physics-informed models
 - **Research value**: Real-time network modeling, uncertainty quantification
@@ -31,6 +34,7 @@ Based on your research interests, select ONE of these high-impact features to im
 ### Week 1: Core THz Module
 
 #### Day 1-2: Basic Framework
+
 ```cpp
 // Copy the header file already created: model/oran-6g-terahertz.h
 // Implement basic structure in: model/oran-6g-terahertz.cc
@@ -49,6 +53,7 @@ class Oran6gTerahertz : public Object
 ```
 
 #### Day 3-4: Channel Modeling
+
 ```cpp
 // Implement atmospheric effects
 double ThzChannelModel::CalculateMolecularAbsorption(double frequency, double distance,
@@ -70,6 +75,7 @@ double ThzChannelModel::CalculateMolecularAbsorption(double frequency, double di
 ```
 
 #### Day 5-7: Integration with O-RAN
+
 ```cpp
 // Enhance existing reporter: model/oran-reporter-lte-ue-rsrp-rsrq.cc
 // Add 6G THz specific measurements
@@ -99,6 +105,7 @@ public:
 ### Week 2: Advanced Features
 
 #### Day 8-10: Ultra-Massive MIMO
+
 ```cpp
 // Implement beamforming algorithms
 void UltraMassiveMimo::PerformBeamforming(std::vector<Vector3D> userPositions)
@@ -134,6 +141,7 @@ void UltraMassiveMimo::PerformBeamforming(std::vector<Vector3D> userPositions)
 ```
 
 #### Day 11-12: Intelligent Reflecting Surfaces
+
 ```cpp
 // Implement IRS phase optimization
 void IntelligentReflectingSurface::OptimizePhaseShifts(Vector3D txPosition, Vector3D rxPosition)
@@ -160,6 +168,7 @@ void IntelligentReflectingSurface::OptimizePhaseShifts(Vector3D txPosition, Vect
 ```
 
 #### Day 13-14: Testing and Integration
+
 ```cpp
 // Create comprehensive test: test/oran-6g-test.cc
 class Oran6gTeraherzTestCase : public TestCase
@@ -194,6 +203,7 @@ class Oran6gTeraherzTestCase : public TestCase
 ### Quick Implementation (1 Week)
 
 #### Day 1-3: Transformer Architecture
+
 ```cpp
 // Enhance existing: model/oran-lm-reinforcement-learning.{h,cc}
 class TransformerNetworkIntelligence
@@ -246,6 +256,7 @@ public:
 ```
 
 #### Day 4-5: Graph Neural Networks
+
 ```cpp
 // Add to existing digital twin: model/oran-digital-twin.{h,cc}
 class GraphNeuralNetworkTopology
@@ -309,6 +320,7 @@ public:
 ```
 
 #### Day 6-7: Integration and Testing
+
 ```cpp
 // Add to existing RL module
 void OranLmReinforcementLearning::EnableTransformerIntelligence()
@@ -356,6 +368,7 @@ std::vector<double> OranLmReinforcementLearning::SelectActionWithTransformer(
 ### Implementation (5 Days)
 
 #### Day 1-2: Real-Time Synchronization
+
 ```cpp
 // Enhance existing: model/oran-digital-twin.cc
 void OranDigitalTwin::EnableRealTimeSync(Time syncLatency)
@@ -397,6 +410,7 @@ void OranDigitalTwin::PerformSync()
 ```
 
 #### Day 3-4: Physics-Informed Neural Networks
+
 ```cpp
 // Add physics constraints to predictions
 class PhysicsInformedPredictor
@@ -452,6 +466,7 @@ public:
 ```
 
 #### Day 5: Uncertainty Quantification
+
 ```cpp
 // Add uncertainty to predictions
 struct UncertaintyBounds
@@ -547,18 +562,21 @@ void QuickFeatureTest()
 ## 🚀 **Next Steps After Quick Implementation**
 
 ### Week 3-4: Enhanced Features
+
 1. **Add more sophisticated algorithms**
 2. **Integrate with existing O-RAN components**
 3. **Create comprehensive examples**
 4. **Add performance benchmarks**
 
 ### Month 2: Research Publications
+
 1. **Collect performance data**
 2. **Compare with existing approaches**
 3. **Write research paper**
 4. **Submit to IEEE conference/journal**
 
 ### Month 3: Community Contribution
+
 1. **Create detailed documentation**
 2. **Submit to ns-3 community**
 3. **Present at conferences**
@@ -569,16 +587,19 @@ void QuickFeatureTest()
 ## 📈 **Expected Research Impact**
 
 ### **Immediate (2 weeks)**
+
 - Working 6G simulation capability
 - Novel features not available elsewhere
 - Basis for 2-3 research papers
 
 ### **Medium-term (3 months)**
+
 - Conference publications
 - Industry collaboration opportunities
 - Research grant applications
 
 ### **Long-term (6 months)**
+
 - Journal publications
 - Open-source community adoption
 - Standard body contributions
