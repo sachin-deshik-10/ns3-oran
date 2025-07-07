@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 Ultra-Advanced O-RAN 6G Build and Validation System
 Comprehensive build, test, and deployment system for all cutting-edge modules
@@ -15,6 +16,35 @@ from pathlib import Path
 from datetime import datetime
 from typing import Dict, List, Tuple, Optional
 import concurrent.futures
+
+# Fix Unicode encoding issues on Windows
+if sys.platform.startswith('win'):
+    import codecs
+    sys.stdout = codecs.getwriter('utf-8')(sys.stdout.buffer, 'strict')
+    sys.stderr = codecs.getwriter('utf-8')(sys.stderr.buffer, 'strict')
+
+# Cross-platform safe print function
+def safe_print(text):
+    """Print text safely across platforms, replacing emojis on Windows if needed"""
+    try:
+        print(text)
+    except UnicodeEncodeError:
+        # Replace emojis with text equivalents for Windows compatibility
+        safe_text = (text.replace('🚀', '[START]')
+                        .replace('🔍', '[SCAN]')
+                        .replace('✅', '[OK]')
+                        .replace('❌', '[FAIL]')
+                        .replace('🎉', '[SUCCESS]')
+                        .replace('🔧', '[CONFIG]')
+                        .replace('🏗️', '[BUILD]')
+                        .replace('🧪', '[TEST]')
+                        .replace('📊', '[REPORT]')
+                        .replace('⚡', '[FAST]')
+                        .replace('🔗', '[LINK]')
+                        .replace('🧠', '[AI]')
+                        .replace('🌐', '[NET]')
+                        .replace('🔒', '[SEC]'))
+        print(safe_text)
 
 class UltraAdvancedBuildSystem:
     def __init__(self, workspace_path: str, verbose: bool = False):

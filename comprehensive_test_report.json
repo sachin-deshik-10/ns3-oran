@@ -1,0 +1,49 @@
+{
+  "test_info": {
+    "start_time": "2025-07-07T23:54:17.509641",
+    "end_time": "2025-07-07T23:54:22.699810",
+    "duration_seconds": 5.190169,
+    "workspace": "D:\\ns3-oran-master"
+  },
+  "platform_status": {
+    "advanced_modules": 11,
+    "examples": 3,
+    "total_test_phases": 7
+  },
+  "test_results": {
+    "File Structure Validation": {
+      "status": "PASS",
+      "duration": 0.0019333362579345703
+    },
+    "CMake Configuration Check": {
+      "status": "PASS",
+      "duration": 0.0004811286926269531
+    },
+    "Syntax Validation": {
+      "status": "PASS",
+      "duration": 0.020770788192749023
+    },
+    "Build System Test": {
+      "status": "PASS",
+      "duration": 0.17803049087524414
+    },
+    "Research Platform Test": {
+      "status": "PASS",
+      "duration": 4.870797634124756
+    },
+    "Module Integration Test": {
+      "status": "PASS",
+      "duration": 0.006104707717895508
+    },
+    "Performance Benchmarks": {
+      "status": "PASS",
+      "duration": 0.11165332794189453
+    }
+  },
+  "summary": {
+    "total_tests": 7,
+    "passed": 7,
+    "failed": 0,
+    "errors": 0
+  }
+}

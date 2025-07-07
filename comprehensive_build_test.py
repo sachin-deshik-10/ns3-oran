@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 Comprehensive Build and Test System for Ultra-Advanced O-RAN 6G Platform
 Final integration testing and validation for all cutting-edge modules
@@ -14,6 +15,12 @@ from pathlib import Path
 from datetime import datetime
 import unittest
 from typing import Dict, List, Tuple, Optional
+
+# Fix Unicode encoding issues on Windows
+if sys.platform.startswith('win'):
+    import codecs
+    sys.stdout = codecs.getwriter('utf-8')(sys.stdout.buffer, 'strict')
+    sys.stderr = codecs.getwriter('utf-8')(sys.stderr.buffer, 'strict')
 
 class ComprehensiveBuildTest:
     def __init__(self, workspace_path: str):

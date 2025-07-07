@@ -27,6 +27,10 @@
 # cause risk of injury or damage to property. The software developed by NIST
 # employees is not subject to copyright protection within the United States.
 
+# CMake Project Declaration for NS-3 O-RAN Ultra-Advanced 6G Platform
+cmake_minimum_required(VERSION 3.10)
+project(ns3-oran-ultra-advanced-6g VERSION 1.0.0 LANGUAGES CXX)
+
 if(NOT ${ENABLE_SQLITE})
   message(STATUS "ORAN requires sqlite3 library")
   return()
