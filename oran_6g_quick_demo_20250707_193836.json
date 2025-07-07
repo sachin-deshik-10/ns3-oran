@@ -1,0 +1,151 @@
+{
+  "thz": {
+    "0.1_THz": {
+      "frequency": 0.1,
+      "bandwidth_ghz": 5.0,
+      "throughput_gbps": 9.920319148370606,
+      "latency_ms": 10.5,
+      "range_km": 100.0
+    },
+    "0.5_THz": {
+      "frequency": 0.5,
+      "bandwidth_ghz": 25.0,
+      "throughput_gbps": 48.03947195761616,
+      "latency_ms": 2.5,
+      "range_km": 20.0
+    },
+    "1.0_THz": {
+      "frequency": 1.0,
+      "bandwidth_ghz": 50.0,
+      "throughput_gbps": 92.31163463866358,
+      "latency_ms": 1.5,
+      "range_km": 10.0
+    },
+    "1.5_THz": {
+      "frequency": 1.5,
+      "bandwidth_ghz": 75.0,
+      "throughput_gbps": 133.03806550757363,
+      "latency_ms": 1.1666666666666665,
+      "range_km": 6.666666666666667
+    },
+    "2.0_THz": {
+      "frequency": 2.0,
+      "bandwidth_ghz": 100.0,
+      "throughput_gbps": 170.42875779324226,
+      "latency_ms": 1.0,
+      "range_km": 5.0
+    },
+    "3.0_THz": {
+      "frequency": 3.0,
+      "bandwidth_ghz": 150.0,
+      "throughput_gbps": 235.98835831996604,
+      "latency_ms": 0.8333333333333333,
+      "range_km": 3.3333333333333335
+    }
+  },
+  "ai": {
+    "training": [
+      {
+        "epoch": 0,
+        "loss": 2.5,
+        "accuracy": 0.0,
+        "inference_ms": 10.5
+      },
+      {
+        "epoch": 5,
+        "loss": 1.1809163818525368,
+        "accuracy": 0.4286289457106748,
+        "inference_ms": 7.203200460356394
+      },
+      {
+        "epoch": 10,
+        "loss": 0.5578254003710745,
+        "accuracy": 0.6638654986834079,
+        "inference_ms": 4.993289641172216
+      },
+      {
+        "epoch": 15,
+        "loss": 0.2634980614046608,
+        "accuracy": 0.7929660561894928,
+        "inference_ms": 3.5119421191220215
+      },
+      {
+        "epoch": 20,
+        "loss": 0.12446767091965986,
+        "accuracy": 0.8638179443750581,
+        "inference_ms": 2.518965179946554
+      }
+    ],
+    "attention": [
+      {
+        "heads": 4,
+        "efficiency": 0.87,
+        "memory_mb": 256
+      },
+      {
+        "heads": 8,
+        "efficiency": 0.92,
+        "memory_mb": 512
+      },
+      {
+        "heads": 16,
+        "efficiency": 0.95,
+        "memory_mb": 1024
+      },
+      {
+        "heads": 32,
+        "efficiency": 0.93,
+        "memory_mb": 2048
+      }
+    ],
+    "final_accuracy": 0.8638179443750581,
+    "optimal_heads": 16
+  },
+  "slicing": {
+    "slices": [
+      {
+        "id": 1,
+        "type": "eMBB",
+        "bandwidth_mbps": 778.1408927114378,
+        "latency_ms": 19.635898578346204,
+        "efficiency": 0.9726761158892973,
+        "qos_compliant": true
+      },
+      {
+        "id": 2,
+        "type": "URLLC",
+        "bandwidth_mbps": 47.02890419480649,
+        "latency_ms": 0.959636581318648,
+        "efficiency": 0.9405780838961298,
+        "qos_compliant": true
+      },
+      {
+        "id": 3,
+        "type": "mMTC",
+        "bandwidth_mbps": 18.80705594556305,
+        "latency_ms": 519.3617395827212,
+        "efficiency": 0.9403527972781526,
+        "qos_compliant": true
+      },
+      {
+        "id": 4,
+        "type": "Custom",
+        "bandwidth_mbps": 286.95126797768404,
+        "latency_ms": 10.213736402777801,
+        "efficiency": 0.9565042265922801,
+        "qos_compliant": true
+      }
+    ],
+    "total_bandwidth_gbps": 1.1309281208294915,
+    "efficiency": 0.9525278059139649,
+    "qos_compliance": 1.0
+  },
+  "integration": {
+    "throughput_gbps": 224.78547317175583,
+    "latency_ms": 3.3522985132798873,
+    "reliability": 0.9319089721875291,
+    "energy_efficiency": 0.9867318258457028,
+    "score": 89.58527366763107,
+    "grade": "\ud83e\udd48 VERY GOOD - Research-grade"
+  }
+}
