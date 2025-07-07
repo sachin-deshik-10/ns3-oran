@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-07-07T19:43:17.070214",
+  "build_success": false,
+  "examples_built": [],
+  "tests_passed": [],
+  "performance_metrics": {},
+  "errors": [
+    "cmake not found",
+    "make not found",
+    "CMake error: [WinError 2] The system cannot find the file specified"
+  ]
+}
