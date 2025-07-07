@@ -172,3 +172,17 @@ build_lib_example(
   ${libinternet}
   ${libpoint-to-point}
 )
+
+build_lib_example(
+  NAME oran-6g-comprehensive-example
+  SOURCE_FILES oran-6g-comprehensive-example.cc
+  LIBRARIES_TO_LINK
+  ${liboran}
+  ${libnetwork}
+  ${liblte}
+  ${libmobility}
+  ${libapplications}
+  ${libinternet}
+  ${libpoint-to-point}
+  ${libconfig-store}
+)

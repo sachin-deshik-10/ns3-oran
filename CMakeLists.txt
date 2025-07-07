@@ -125,6 +125,8 @@ build_lib(
   model/oran-mec-framework.cc
   model/oran-cloud-native.cc
   model/oran-6g-terahertz.cc
+  model/oran-ai-transformer.cc
+  model/oran-6g-network-slicing.cc
   model/oran-cmm.cc
   model/oran-cmm-handover.cc
   model/oran-cmm-noop.cc
@@ -170,6 +172,8 @@ build_lib(
   model/oran-mec-framework.h
   model/oran-cloud-native.h
   model/oran-6g-terahertz.h
+  model/oran-ai-transformer.h
+  model/oran-6g-network-slicing.h
   model/oran-cmm.h
   model/oran-cmm-handover.h
   model/oran-cmm-noop.h
