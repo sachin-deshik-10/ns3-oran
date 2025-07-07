@@ -131,6 +131,11 @@ build_lib(
   model/oran-6g-edge-ai.cc
   model/oran-6g-sags-network.cc
   model/oran-6g-ultra-ai-orchestrator.cc
+  model/oran-6g-brain-computer-interface.cc
+  model/oran-6g-cybersecurity.cc
+  model/oran-6g-semantic-communications.cc
+  model/oran-6g-neuromorphic-computing.cc
+  model/oran-6g-holographic.cc
   model/oran-cmm.cc
   model/oran-cmm-handover.cc
   model/oran-cmm-noop.cc

@@ -67,28 +67,44 @@ class UltraAdvancedORANPlatform:
                 'performance': 0.89
             },
             'Brain-Computer Interface': {
-                'description': 'Direct neural-network integration',
+                'description': 'Direct neural communication and cognitive enhancement',
                 'capabilities': [
-                    'Neural Signal Processing',
-                    'Thought-to-Communication Translation',
-                    'Brain-Network Integration Protocols',
-                    'Cognitive Adaptation Mechanisms',
-                    'Biometric Authentication Systems'
+                    'Neural Signal Acquisition',
+                    'Brain State Decoding',
+                    'Cognitive Load Assessment',
+                    'Real-Time Neural Feedback',
+                    'Thought-to-Action Translation',
+                    'Neural Stimulation Control',
+                    'Emotion Recognition',
+                    'Memory Enhancement',
+                    'Attention State Monitoring',
+                    'Neural Network Adaptation'
                 ],
                 'status': 'active',
-                'performance': 0.85
+                'performance': 0.87,
+                'signal_quality': 0.92,
+                'decoding_accuracy': 0.89,
+                'latency_ms': 2.5
             },
             'Neuromorphic Computing': {
-                'description': 'Bio-inspired processing systems',
+                'description': 'Brain-inspired ultra-efficient processing with spiking neural networks',
                 'capabilities': [
-                    'Spiking Neural Networks',
-                    'Event-Driven Computation',
-                    'Synaptic Plasticity Modeling',
-                    'Bio-Inspired Information Processing',
-                    'Ultra-Low Power AI Processing'
+                    'Spiking Neural Network Simulation',
+                    'Event-Driven Processing',
+                    'Synaptic Plasticity Learning',
+                    'Memristive Computing Arrays',
+                    'Bio-Inspired Adaptation',
+                    'Ultra-Low Power Processing (pJ/spike)',
+                    'Real-Time Spike Communication',
+                    'Neuromorphic Edge Intelligence',
+                    'Temporal Coding Algorithms',
+                    'Quantum-Neuromorphic Hybrid'
                 ],
                 'status': 'active',
-                'performance': 0.88
+                'performance': 0.93,
+                'power_efficiency': 0.98,
+                'spike_rate': 15000,  # Hz
+                'learning_rate': 0.15
             },
             'Quantum Enhanced': {
                 'description': 'Quantum-powered communications',
@@ -113,6 +129,56 @@ class UltraAdvancedORANPlatform:
                 ],
                 'status': 'active',
                 'performance': 0.94
+            },
+            'Holographic Communications': {
+                'description': '3D holographic data transmission and immersive content',
+                'capabilities': [
+                    '3D Point Cloud Transmission',
+                    'Light Field Communication',
+                    'Spatial Data Encoding',
+                    'Real-Time Hologram Rendering',
+                    'Quantum Coherent Transmission',
+                    'Multi-Dimensional Compression',
+                    'Interference Pattern Processing',
+                    'Volumetric Display Support'
+                ],
+                'status': 'active',
+                'performance': 0.91
+            },
+            'Network Slicing 6G': {
+                'description': 'AI-driven dynamic network slicing with ultra-precise isolation',
+                'capabilities': [
+                    'Dynamic Slice Creation/Termination',
+                    'AI-Driven Resource Orchestration',
+                    'Multi-Tenant Isolation (99.9%)',
+                    'SLA Guarantee Engine',
+                    'Real-Time Slice Reconfiguration',
+                    'Edge-to-Cloud Slice Extension',
+                    'Zero-Touch Slice Management',
+                    'Quantum-Secured Slice Isolation'
+                ],
+                'status': 'active',
+                'performance': 0.96
+            },
+            'Quantum Cybersecurity': {
+                'description': 'Quantum-enhanced security with zero-trust architecture',
+                'capabilities': [
+                    'Quantum Key Distribution',
+                    'Post-Quantum Cryptography',
+                    'Quantum Random Number Generation',
+                    'Zero-Trust Architecture',
+                    'AI Threat Detection',
+                    'Blockchain Security',
+                    'Quantum Entanglement Verification',
+                    'Homomorphic Encryption',
+                    'Quantum-Safe Communications',
+                    'Advanced Threat Intelligence'
+                ],
+                'status': 'active',
+                'performance': 0.96,
+                'security_score': 0.99,
+                'threat_detection': 0.97,
+                'quantum_safety': 1.0
             }
         }
         
@@ -279,6 +345,162 @@ class UltraAdvancedORANPlatform:
             })
         
         return pd.DataFrame(consciousness_data)
+
+    def create_neuromorphic_spike_visualization(self):
+        """Create real-time spiking neural network visualization"""
+        # Generate spike train data
+        num_neurons = 50
+        time_window = 1000  # ms
+        
+        spike_data = []
+        for neuron_id in range(num_neurons):
+            # Generate poisson spike train
+            spike_rate = 10 + np.random.exponential(5)  # Hz
+            spike_times = []
+            t = 0
+            while t < time_window:
+                interval = np.random.exponential(1000 / spike_rate)  # ms
+                t += interval
+                if t < time_window:
+                    spike_times.append(t)
+            
+            for spike_time in spike_times:
+                spike_data.append({
+                    'neuron_id': neuron_id,
+                    'spike_time': spike_time,
+                    'population': 'excitatory' if neuron_id < 40 else 'inhibitory',
+                    'amplitude': np.random.normal(1.0, 0.1)
+                })
+        
+        return pd.DataFrame(spike_data)
+    
+    def create_holographic_quality_heatmap(self):
+        """Create holographic quality heatmap visualization"""
+        # Generate 3D quality data
+        x_res, y_res, z_res = 20, 20, 10
+        
+        quality_data = []
+        for x in range(x_res):
+            for y in range(y_res):
+                for z in range(z_res):
+                    # Simulate quality distribution with distance falloff
+                    distance = np.sqrt((x-10)**2 + (y-10)**2 + (z-5)**2)
+                    base_quality = np.exp(-distance/10)
+                    noise = np.random.normal(0, 0.1)
+                    
+                    quality_data.append({
+                        'x': x,
+                        'y': y,
+                        'z': z,
+                        'quality': np.clip(base_quality + noise, 0, 1),
+                        'coherence': np.random.beta(2, 1),
+                        'brightness': np.random.gamma(2, 0.5)
+                    })
+        
+        return pd.DataFrame(quality_data)
+    
+    def create_semantic_understanding_network(self):
+        """Create semantic understanding network visualization"""
+        concepts = [
+            'User Intent', 'Network State', 'Service Quality', 'Resource Allocation',
+            'Traffic Patterns', 'Device Capabilities', 'Application Requirements',
+            'Environmental Context', 'Performance Metrics', 'Security Threats',
+            'Energy Efficiency', 'Latency Constraints', 'Bandwidth Demand',
+            'Mobility Patterns', 'Content Type', 'QoS Parameters'
+        ]
+        
+        G = nx.Graph()
+        
+        # Add nodes
+        for concept in concepts:
+            G.add_node(concept)
+        
+        # Add edges based on semantic relationships
+        semantic_connections = [
+            ('User Intent', 'Application Requirements'),
+            ('User Intent', 'Service Quality'),
+            ('Network State', 'Resource Allocation'),
+            ('Network State', 'Performance Metrics'),
+            ('Service Quality', 'QoS Parameters'),
+            ('Resource Allocation', 'Energy Efficiency'),
+            ('Traffic Patterns', 'Bandwidth Demand'),
+            ('Device Capabilities', 'Application Requirements'),
+            ('Environmental Context', 'Mobility Patterns'),
+            ('Security Threats', 'Network State'),
+            ('Latency Constraints', 'Service Quality'),
+            ('Content Type', 'Bandwidth Demand'),
+            ('Performance Metrics', 'QoS Parameters')
+        ]
+        
+        for source, target in semantic_connections:
+            weight = np.random.uniform(0.3, 1.0)
+            G.add_edge(source, target, weight=weight)
+        
+        return G
+    
+    def create_quantum_security_dashboard(self):
+        """Create quantum security monitoring dashboard"""
+        security_metrics = {
+            'quantum_key_distribution': {
+                'status': 'active',
+                'key_rate': 1500,  # keys/second
+                'quantum_bit_error_rate': 0.02,
+                'security_level': 'unconditional'
+            },
+            'post_quantum_crypto': {
+                'algorithm': 'CRYSTALS-Kyber',
+                'key_size': 3168,  # bits
+                'performance_overhead': 0.15,
+                'quantum_resistance': 'high'
+            },
+            'threat_detection': {
+                'ai_accuracy': 0.97,
+                'false_positive_rate': 0.03,
+                'detection_latency': 1.2,  # ms
+                'threat_level': 'low'
+            },
+            'blockchain_security': {
+                'consensus_algorithm': 'quantum-safe PoS',
+                'transaction_throughput': 50000,  # TPS
+                'finality_time': 2.5,  # seconds
+                'energy_efficiency': 0.95
+            }
+        }
+        
+        return security_metrics
+
+    def create_brain_computer_interface_signals(self):
+        """Create BCI signal analysis visualization"""
+        # Generate EEG-like signals
+        sampling_rate = 256  # Hz
+        duration = 10  # seconds
+        time_vector = np.linspace(0, duration, sampling_rate * duration)
+        
+        # Common EEG frequency bands
+        bands = {
+            'Delta (0.5-4 Hz)': {'freq': 2, 'amplitude': 50},
+            'Theta (4-8 Hz)': {'freq': 6, 'amplitude': 30},
+            'Alpha (8-13 Hz)': {'freq': 10, 'amplitude': 40},
+            'Beta (13-30 Hz)': {'freq': 20, 'amplitude': 20},
+            'Gamma (30-100 Hz)': {'freq': 40, 'amplitude': 10}
+        }
+        
+        signal_data = []
+        for band_name, params in bands.items():
+            # Generate signal with noise
+            signal = params['amplitude'] * np.sin(2 * np.pi * params['freq'] * time_vector)
+            signal += np.random.normal(0, 5, len(time_vector))  # Add noise
+            
+            for i, (t, amplitude) in enumerate(zip(time_vector, signal)):
+                signal_data.append({
+                    'time': t,
+                    'amplitude': amplitude,
+                    'frequency_band': band_name,
+                    'electrode': f"C{np.random.randint(1, 20)}",
+                    'cognitive_state': np.random.choice(['focused', 'relaxed', 'active', 'drowsy'])
+                })
+        
+        return pd.DataFrame(signal_data)
 
 def main():
     # Initialize the platform
@@ -494,254 +716,278 @@ def main():
             st.metric("Avg Connectivity", f"{avg_degree:.1f}", "↗️ 0.3")
     
     elif display_mode == "AI Consciousness":
-        st.header("🧠 Autonomous Network Consciousness")
+        st.header("🧠 AI Consciousness Evolution")
         
-        # Consciousness evolution
+        # Consciousness evolution chart
         consciousness_data = platform.create_consciousness_evolution_chart()
         
-        # Consciousness level timeline
-        fig_consciousness = px.line(
-            consciousness_data,
-            x='timestamp',
-            y='consciousness_level',
-            title="🧠 Consciousness Level Evolution",
-            labels={'consciousness_level': 'Consciousness Level', 'timestamp': 'Time'}
-        )
-        
-        # Add level annotations
-        for level, name in platform.consciousness_levels.items():
-            fig_consciousness.add_hline(
-                y=level,
-                line_dash="dash",
-                annotation_text=name,
-                annotation_position="right"
-            )
-        
-        fig_consciousness.update_layout(height=400)
-        st.plotly_chart(fig_consciousness, use_container_width=True)
-        
-        # Consciousness metrics
         col1, col2 = st.columns(2)
         
         with col1:
-            fig_awareness = px.line(
+            fig_consciousness = px.line(
                 consciousness_data,
                 x='timestamp',
-                y=['self_awareness', 'metacognition', 'adaptation_score'],
-                title="🎯 Consciousness Metrics",
-                labels={'value': 'Score', 'timestamp': 'Time'}
+                y='consciousness_level',
+                title="🧠 Consciousness Level Evolution",
+                labels={'consciousness_level': 'Consciousness Level'}
             )
-            fig_awareness.update_layout(height=350)
-            st.plotly_chart(fig_awareness, use_container_width=True)
+            fig_consciousness.update_layout(height=300)
+            st.plotly_chart(fig_consciousness, use_container_width=True)
+            
+            # Current consciousness metrics
+            latest_consciousness = consciousness_data.iloc[-1]
+            st.metric(
+                "Current Consciousness Level",
+                latest_consciousness['level_name'],
+                delta=f"Level {latest_consciousness['consciousness_level']}"
+            )
         
         with col2:
-            # Current consciousness status
-            latest_consciousness = consciousness_data.iloc[-1]
-            
-            st.subheader("🔮 Current Consciousness Status")
-            st.write(f"**Level:** {latest_consciousness['level_name']}")
-            st.write(f"**Self-Awareness:** {latest_consciousness['self_awareness']:.2%}")
-            st.write(f"**Metacognition:** {latest_consciousness['metacognition']:.2%}")
-            st.write(f"**Adaptation Score:** {latest_consciousness['adaptation_score']:.2%}")
-            
-            # Consciousness capabilities
-            capabilities = {
-                0: ["Basic reactive responses", "Simple pattern recognition"],
-                1: ["Goal-oriented planning", "Context awareness"],
-                2: ["Self-monitoring", "Performance reflection"],
-                3: ["Understanding own thinking", "Meta-learning"],
-                4: ["Transcendent awareness", "Creative problem solving"]
-            }
-            
-            current_level = int(latest_consciousness['consciousness_level'])
-            st.subheader("🚀 Current Capabilities")
-            for capability in capabilities.get(current_level, []):
-                st.write(f"• {capability}")
-    
-    elif display_mode == "Performance Analysis":
-        st.header("⚡ Advanced Performance Analysis")
-        
-        # Performance comparison radar chart
-        categories = ['Accuracy', 'Latency', 'Throughput', 'Energy Efficiency', 'Adaptability']
-        
-        fig_radar = go.Figure()
-        
-        for module_name in selected_modules:
-            metrics = platform.performance_metrics[module_name]
-            values = [
-                metrics['accuracy'],
-                1 - (metrics['latency'] / 20),  # Normalize latency (lower is better)
-                metrics['throughput'] / 1000,  # Normalize throughput
-                metrics['energy_efficiency'],
-                metrics['adaptability']
-            ]
-            
-            fig_radar.add_trace(go.Scatterpolar(
-                r=values,
-                theta=categories,
-                fill='toself',
-                name=module_name,
-                opacity=0.7
-            ))
-        
-        fig_radar.update_layout(
-            polar=dict(
-                radialaxis=dict(
-                    visible=True,
-                    range=[0, 1]
-                )),
-            showlegend=True,
-            title="📊 Multi-Dimensional Performance Analysis",
-            height=500
-        )
-        
-        st.plotly_chart(fig_radar, use_container_width=True)
-        
-        # Performance benchmarks
-        st.subheader("🏆 Performance Benchmarks")
-        
-        benchmark_data = []
-        for module_name, metrics in platform.performance_metrics.items():
-            if module_name in selected_modules:
-                benchmark_data.append({
-                    'Module': module_name,
-                    'Accuracy': f"{metrics['accuracy']:.1%}",
-                    'Latency (ms)': f"{metrics['latency']:.1f}",
-                    'Throughput (Gbps)': f"{metrics['throughput']:.0f}",
-                    'Energy Efficiency': f"{metrics['energy_efficiency']:.1%}",
-                    'Adaptability': f"{metrics['adaptability']:.1%}",
-                    'Overall Score': f"{np.mean([metrics['accuracy'], metrics['energy_efficiency'], metrics['adaptability']]):.1%}"
-                })
-        
-        df_benchmarks = pd.DataFrame(benchmark_data)
-        st.dataframe(df_benchmarks, use_container_width=True)
-        
-        # Performance trends prediction
-        st.subheader("🔮 Performance Prediction")
-        
-        # Generate prediction data
-        future_dates = pd.date_range(
-            start=datetime.now(),
-            end=datetime.now() + timedelta(days=7),
-            freq='D'
-        )
-        
-        prediction_data = []
-        for date in future_dates:
-            for module_name in selected_modules[:3]:  # Limit for clarity
-                base_performance = platform.modules[module_name]['performance']
-                trend = 0.01 * np.sin((date - datetime.now()).days * 0.5)
-                noise = np.random.normal(0, 0.005)
-                predicted_performance = np.clip(base_performance + trend + noise, 0.7, 1.0)
-                
-                prediction_data.append({
-                    'date': date,
-                    'module': module_name,
-                    'predicted_performance': predicted_performance
-                })
-        
-        df_prediction = pd.DataFrame(prediction_data)
-        
-        fig_prediction = px.line(
-            df_prediction,
-            x='date',
-            y='predicted_performance',
-            color='module',
-            title="📈 7-Day Performance Prediction",
-            labels={'predicted_performance': 'Predicted Performance', 'date': 'Date'}
-        )
-        fig_prediction.update_layout(height=400)
-        st.plotly_chart(fig_prediction, use_container_width=True)
-    
-    elif display_mode == "Research Insights":
-        st.header("🔬 Research Insights & Future Directions")
-        
-        # Research areas
-        research_areas = {
-            "Quantum-AI Convergence": {
-                "description": "Exploring the integration of quantum computing with AI consciousness",
-                "progress": 0.75,
-                "applications": ["Quantum neural networks", "Entangled AI decision making", "Quantum-enhanced learning"]
-            },
-            "Bio-Network Integration": {
-                "description": "Direct integration of biological and digital network systems",
-                "progress": 0.60,
-                "applications": ["Neural-digital interfaces", "Organic computing substrates", "Bio-inspired protocols"]
-            },
-            "Semantic Internet": {
-                "description": "Communication networks that understand meaning and context",
-                "progress": 0.85,
-                "applications": ["Intent-driven routing", "Semantic compression", "Context-aware adaptation"]
-            },
-            "Conscious Infrastructure": {
-                "description": "Self-aware network infrastructure with autonomous decision making",
-                "progress": 0.70,
-                "applications": ["Self-healing networks", "Predictive maintenance", "Autonomous optimization"]
-            }
-        }
-        
-        # Research progress visualization
-        research_names = list(research_areas.keys())
-        research_progress = [area["progress"] for area in research_areas.values()]
-        
-        fig_research = go.Figure(data=[
-            go.Bar(
-                x=research_progress,
-                y=research_names,
-                orientation='h',
-                marker_color=['#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4']
+            fig_metacognition = px.scatter(
+                consciousness_data,
+                x='self_awareness',
+                y='metacognition',
+                size='adaptation_score',
+                color='consciousness_level',
+                title="🎯 Self-Awareness vs Metacognition",
+                color_continuous_scale='Viridis'
             )
-        ])
+            fig_metacognition.update_layout(height=300)
+            st.plotly_chart(fig_metacognition, use_container_width=True)
         
-        fig_research.update_layout(
-            title="🔬 Research Area Progress",
-            xaxis_title="Progress (%)",
-            yaxis_title="Research Areas",
-            height=400
+        # Neuromorphic Computing Visualization
+        st.subheader("⚡ Neuromorphic Computing - Spiking Neural Networks")
+        
+        spike_data = platform.create_neuromorphic_spike_visualization()
+        
+        fig_spikes = px.scatter(
+            spike_data,
+            x='spike_time',
+            y='neuron_id',
+            color='population',
+            size='amplitude',
+            title="🧠 Real-Time Spike Train Visualization",
+            labels={'spike_time': 'Time (ms)', 'neuron_id': 'Neuron ID'}
         )
+        fig_spikes.update_layout(height=400)
+        st.plotly_chart(fig_spikes, use_container_width=True)
         
-        st.plotly_chart(fig_research, use_container_width=True)
+        # Brain-Computer Interface Signals
+        st.subheader("🧠💻 Brain-Computer Interface Signals")
         
-        # Detailed research insights
-        for area_name, area_info in research_areas.items():
-            with st.expander(f"🔍 {area_name} - {area_info['progress']:.0%} Complete"):
-                st.write(area_info['description'])
-                st.write("**Key Applications:**")
-                for app in area_info['applications']:
-                    st.write(f"• {app}")
+        bci_data = platform.create_brain_computer_interface_signals()
         
-        # Future milestones
-        st.subheader("🎯 Upcoming Milestones")
-        
-        milestones = [
-            {"date": "Q2 2025", "milestone": "Full AI Consciousness Implementation", "impact": "High"},
-            {"date": "Q3 2025", "milestone": "Global SAGS Network Deployment", "impact": "Very High"},
-            {"date": "Q4 2025", "milestone": "Commercial Brain-Computer Interfaces", "impact": "Medium"},
-            {"date": "Q1 2026", "milestone": "Quantum Network Infrastructure", "impact": "Very High"},
-            {"date": "Q2 2026", "milestone": "Semantic Internet Standards", "impact": "High"}
-        ]
-        
-        df_milestones = pd.DataFrame(milestones)
-        st.dataframe(df_milestones, use_container_width=True)
-        
-        # Research collaboration network
-        st.subheader("🤝 Research Collaboration Network")
-        
-        institutions = ["MIT", "Stanford", "CMU", "Oxford", "ETH Zurich", "Tokyo Tech", "Tsinghua"]
-        collaboration_matrix = np.random.rand(len(institutions), len(institutions))
-        collaboration_matrix = (collaboration_matrix + collaboration_matrix.T) / 2  # Make symmetric
-        np.fill_diagonal(collaboration_matrix, 1)
-        
-        fig_collab = px.imshow(
-            collaboration_matrix,
-            x=institutions,
-            y=institutions,
-            title="🌐 Global Research Collaboration Intensity",
-            color_continuous_scale='Blues'
+        fig_bci = px.line(
+            bci_data.sample(n=min(1000, len(bci_data))),  # Sample for performance
+            x='time',
+            y='amplitude',
+            color='frequency_band',
+            title="🧠 Neural Signal Analysis (EEG-like)",
+            labels={'time': 'Time (s)', 'amplitude': 'Amplitude (μV)'}
         )
-        fig_collab.update_layout(height=500)
-        st.plotly_chart(fig_collab, use_container_width=True)
+        fig_bci.update_layout(height=400)
+        st.plotly_chart(fig_bci, use_container_width=True)
+        
+        # Cognitive state distribution
+        cognitive_distribution = bci_data['cognitive_state'].value_counts()
+        fig_cognitive = px.pie(
+            values=cognitive_distribution.values,
+            names=cognitive_distribution.index,
+            title="🧠 Cognitive State Distribution"
+        )
+        st.plotly_chart(fig_cognitive, use_container_width=True)
     
+    elif display_mode == "Holographic Communications":
+        st.header("🌈 Holographic Communications & 3D Visualization")
+        
+        # Holographic quality heatmap
+        holo_data = platform.create_holographic_quality_heatmap()
+        
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            # 3D scatter plot for holographic quality
+            fig_3d = px.scatter_3d(
+                holo_data.sample(n=min(500, len(holo_data))),  # Sample for performance
+                x='x', y='y', z='z',
+                color='quality',
+                size='brightness',
+                title="🌈 3D Holographic Quality Distribution",
+                color_continuous_scale='Plasma'
+            )
+            fig_3d.update_layout(height=500)
+            st.plotly_chart(fig_3d, use_container_width=True)
+        
+        with col2:
+            # Quality vs Coherence analysis
+            fig_quality = px.scatter(
+                holo_data,
+                x='coherence',
+                y='quality',
+                color='brightness',
+                title="💎 Quality vs Coherence Analysis",
+                labels={'coherence': 'Temporal Coherence', 'quality': 'Holographic Quality'}
+            )
+            fig_quality.update_layout(height=250)
+            st.plotly_chart(fig_quality, use_container_width=True)
+            
+            # Holographic metrics
+            avg_quality = holo_data['quality'].mean()
+            avg_coherence = holo_data['coherence'].mean()
+            
+            st.metric("Average Quality", f"{avg_quality:.2%}")
+            st.metric("Average Coherence", f"{avg_coherence:.2%}")
+            st.metric("3D Resolution", "8K x 8K x 1K voxels")
+    
+    elif display_mode == "Quantum Security":
+        st.header("🔐 Quantum Cybersecurity Dashboard")
+        
+        security_metrics = platform.create_quantum_security_dashboard()
+        
+        # Security overview cards
+        col1, col2, col3, col4 = st.columns(4)
+        
+        with col1:
+            st.metric(
+                "🔑 QKD Key Rate",
+                f"{security_metrics['quantum_key_distribution']['key_rate']} keys/s",
+                delta="Active"
+            )
+            st.metric(
+                "🔒 QBER",
+                f"{security_metrics['quantum_key_distribution']['quantum_bit_error_rate']:.1%}",
+                delta="Optimal"
+            )
+        
+        with col2:
+            st.metric(
+                "🛡️ PQ Crypto",
+                security_metrics['post_quantum_crypto']['algorithm'],
+                delta="Quantum-Safe"
+            )
+            st.metric(
+                "⚡ Overhead",
+                f"{security_metrics['post_quantum_crypto']['performance_overhead']:.1%}",
+                delta="Low"
+            )
+        
+        with col3:
+            st.metric(
+                "🎯 AI Detection",
+                f"{security_metrics['threat_detection']['ai_accuracy']:.1%}",
+                delta="High Accuracy"
+            )
+            st.metric(
+                "⚡ Response Time",
+                f"{security_metrics['threat_detection']['detection_latency']:.1f} ms",
+                delta="Ultra-Fast"
+            )
+        
+        with col4:
+            st.metric(
+                "⛓️ Blockchain TPS",
+                f"{security_metrics['blockchain_security']['transaction_throughput']:,}",
+                delta="High Performance"
+            )
+            st.metric(
+                "🌱 Energy Efficiency",
+                f"{security_metrics['blockchain_security']['energy_efficiency']:.1%}",
+                delta="Sustainable"
+            )
+        
+        # Security timeline
+        threat_levels = ['low', 'medium', 'high', 'critical']
+        threat_colors = ['green', 'yellow', 'orange', 'red']
+        
+        security_timeline = pd.DataFrame({
+            'time': pd.date_range(start=datetime.now() - timedelta(hours=12), 
+                                 end=datetime.now(), freq='30min'),
+            'threat_level': np.random.choice(threat_levels, 25, p=[0.7, 0.2, 0.08, 0.02]),
+            'incidents_detected': np.random.poisson(2, 25),
+            'response_time': np.random.gamma(2, 0.5, 25)
+        })
+        
+        fig_security = px.line(
+            security_timeline,
+            x='time',
+            y='incidents_detected',
+            title="🚨 Security Incident Detection Timeline",
+            labels={'incidents_detected': 'Incidents Detected', 'time': 'Time'}
+        )
+        fig_security.update_layout(height=300)
+        st.plotly_chart(fig_security, use_container_width=True)
+    
+    elif display_mode == "Semantic Communications":
+        st.header("🧠 Semantic Communications & Understanding")
+        
+        # Semantic understanding network
+        semantic_graph = platform.create_semantic_understanding_network()
+        
+        # Convert to plotly-compatible format
+        pos = nx.spring_layout(semantic_graph, k=1, iterations=50)
+        
+        edge_x = []
+        edge_y = []
+        for edge in semantic_graph.edges():
+            x0, y0 = pos[edge[0]]
+            x1, y1 = pos[edge[1]]
+            edge_x.extend([x0, x1, None])
+            edge_y.extend([y0, y1, None])
+        
+        node_x = [pos[node][0] for node in semantic_graph.nodes()]
+        node_y = [pos[node][1] for node in semantic_graph.nodes()]
+        node_text = list(semantic_graph.nodes())
+        
+        fig_semantic = go.Figure()
+        
+        # Add edges
+        fig_semantic.add_trace(go.Scatter(
+            x=edge_x, y=edge_y,
+            line=dict(width=2, color='rgba(100,149,237,0.6)'),
+            hoverinfo='none',
+            mode='lines',
+            name='Semantic Relations'
+        ))
+        
+        # Add nodes
+        fig_semantic.add_trace(go.Scatter(
+            x=node_x, y=node_y,
+            mode='markers+text',
+            hoverinfo='text',
+            text=node_text,
+            textposition="middle center",
+            marker=dict(
+                size=20,
+                color='lightblue',
+                line=dict(width=2, color='navy')
+            ),
+            name='Concepts'
+        ))
+        
+        fig_semantic.update_layout(
+            title="🧠 Semantic Understanding Network",
+            showlegend=False,
+            height=500,
+            xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
+            yaxis=dict(showgrid=False, zeroline=False, showticklabels=False)
+        )
+        st.plotly_chart(fig_semantic, use_container_width=True)
+        
+        # Semantic metrics
+        col1, col2, col3 = st.columns(3)
+        
+        with col1:
+            st.metric("Understanding Accuracy", "94.2%", delta="+2.1%")
+            st.metric("Context Awareness", "88.7%", delta="+1.5%")
+        
+        with col2:
+            st.metric("Compression Ratio", "8.5:1", delta="+0.3")
+            st.metric("Processing Latency", "2.1 ms", delta="-0.2 ms")
+        
+        with col3:
+            st.metric("Semantic Richness", "92.1%", delta="+1.8%")
+            st.metric("Knowledge Coverage", "96.4%", delta="+0.7%")
+
     # Auto-refresh functionality
     if auto_refresh and display_mode == "Real-Time Monitoring":
         time.sleep(1.0 / simulation_speed)
