@@ -1,8 +1,8 @@
 {
   "build_info": {
-    "start_time": "2025-07-07T23:54:17.687502",
-    "end_time": "2025-07-07T23:54:17.696883",
-    "duration_seconds": 0.009381,
+    "start_time": "2025-07-08T12:46:35.255826",
+    "end_time": "2025-07-08T12:46:35.273897",
+    "duration_seconds": 0.018071,
     "workspace": "D:\\ns3-oran-master"
   },
   "modules": {
